@@ -4,6 +4,8 @@ import { Transaction } from "../types/Transaction";
 import TransactionForm from "../components/TransactionForm";
 import TransactionList from "../components/TransactionList";
 import ExpenseChart from "../components/ExpenseChart";
+import Head from "next/head";
+
 
 const Home = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -54,6 +56,9 @@ const Home = () => {
 
   return (
     <div className="h-fit min-w-max flex flex-col items-center justify-center py-10 px-4 ">
+      <Head>
+        <title>Personal Finance Tracker</title>
+      </Head>
       <h1 className="text-4xl text-black mb-8 font-bold text-center">
         Personal Finance Tracker
       </h1>
